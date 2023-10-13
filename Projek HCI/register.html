@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style_register.css">
+</head>
+<body>
+
+    <div class="register-form">
+        <img src="aset/Raw Image/Login BG.png" alt="image">
+
+        <div class="form-box">
+            <h2>Register</h2>
+
+            <form action="homepage.html">
+                <div class="field">
+                    <input type="text" placeholder="Full name" id="name" required>
+                </div>
+
+                <div class="field">
+                    <input type="text" placeholder="address" id="address" required>
+                </div>
+
+                <div class="field">
+                    <input type="email" placeholder="Email Id" id="email" required>
+                </div>
+
+                <div class="field">
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
+
+                <div class="field">
+                    <input type="password" placeholder="Confirm Password" id="con-pass" required>
+                </div>
+
+                <div class="agreement">
+                    <input type="checkbox" id="term-con" required>
+                    <label for="term-con">Term & Condition</label>
+                </div>
+
+                <input class="register-btn" type="submit" value="register" onclick="validateform()">
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

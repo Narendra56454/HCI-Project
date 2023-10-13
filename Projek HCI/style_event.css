@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Italianno&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inika", serif;
+    overflow-x: hidden;
+    background: #1B1919;
+}
+
+/* --------------------- header ----------------- */
+
+.farbucks {
+    display: none;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    font-size: 22px;
+}
+
+nav .dot {
+    height: 70px;
+    width: 80px;
+    background-color: #757575;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot img {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    height: 55px;
+    width: 65px;
+    background: transparent;
+}
+
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    right: 40px;
+    top: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.reg {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    /* left: 20px; */
+    /* top: -30px; */
+}
+
+.reg:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+
+/* ------------hamburger toggle-------------*/
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.menu-toggle :nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle :nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle :checked ~ :nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle :checked ~ :nth-child(3){
+    transform: scale(0);
+}
+
+.menu-toggle :checked ~ :nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    .farbucks {
+        display: none;
+    }
+}
+
+/* mobile || hp */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        left: 10%;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        /* top: 0;
+        height: 100vh;
+        justify-content: space-evenly; */
+        top: 50px;
+        height: calc(100vh - 50px);
+        justify-content: space-around;
+        width: 50%;
+
+       
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        z-index: 2;
+        transform: translateX(100%);
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .reg {
+        position: relative;
+    }
+
+    .farbucks {
+        display: contents;
+        color: #DF7427;
+        font-size: 30px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* ----------------------------- content ----------------------- */
+
+.content img {
+    width: 100%;
+    height: auto;
+}
+
+.black-march button {
+    height: 50px;
+    width: 130px;
+    position: relative;
+    bottom: 250px;
+    left: 80px;
+    color: #4a0b01;
+    background: #c76723;
+    border-radius: 8px;
+    border-style: none;
+    font-size: 22px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.checkin button {
+    height: 80px;
+    width: 350px;
+    position: relative;
+    bottom: 190px;
+    left: 460px;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(255, 149, 36);
+    background-color: #580c00;
+    border-radius: 20px;
+    border-style: none;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 3px 4px 0px rgba(0,0,0,0.8);
+}
+
+@media screen and (max-width: 576px) {
+    .content .img1 {
+        width: 190%;
+        position: relative;
+        left: 20px;
+    }
+
+    .black-march button {
+        height: 30px;
+        width: 85px;
+        bottom: 182px;
+        font-size: 16px;
+        border-style: none;
+    }
+
+    .checkin button {
+        height: 30px;
+        width: 130px;
+        bottom: 74px;
+        left: 177px;
+        font-size: 16px;
+        border-style: none;
+    }
+}
+
+
+/* --------------------- footer -------------------------- */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 4%;
+    background: #000000;
+}
+
+footer .text {
+    color: #ffffff;
+    display: flex;
+    position: relative;
+}
+
+.text .cus-serv {
+    position: relative;
+    left: 40%;
+}
+
+.cus-serv:hover {
+    text-decoration: underline;
+}
+
+footer h2 {
+    font-size: 26px;
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+footer h2:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer img {
+    height: 37px;
+    width: 41px;
+    position: relative;
+    top: 50px;
+    right: 17px;
+}
+
+footer .fb {
+    position: relative;
+    right: 10px;
+}
+
+footer h1 {
+    color: #DF7427;
+    position: relative;
+    font-weight: 600;
+    left: 47%;
+    bottom: 680px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    footer .text {
+        display: block;
+        padding-bottom: 30px;
+        left: 50px;
+    }
+
+    footer h2 {
+        font-size: 21px;
+        padding-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer img {
+        left: 37px;
+    }
+
+    .text .cus-serv {
+        position: relative;
+        left: 0;
+        top: 40px;
+    }
+
+    footer h1 {
+        bottom: 340px;
+        left: 45%;
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Italianno&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inika", serif;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+/* --------------------- header ----------------- */
+
+.farbucks {
+    display: none;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    font-size: 22px;
+}
+
+nav .dot {
+    height: 70px;
+    width: 80px;
+    background-color: #757575;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot img {
+    position: relative;
+    left: 10px;
+    top: 5px;
+    height: 55px;
+    width: 65px;
+    background: transparent;
+}
+
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    right: 40px;
+    top: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.reg {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    /* left: 20px; */
+    /* top: -30px; */
+}
+
+.reg:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+
+/* ------------hamburger toggle-------------*/
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.menu-toggle :nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle :nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle :checked ~ :nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle :checked ~ :nth-child(3){
+    transform: scale(0);
+}
+
+.menu-toggle :checked ~ :nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    .farbucks {
+        display: none;
+    }
+}
+
+/* mobile || hp */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        left: 10%;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        /* top: 0;
+        height: 100vh;
+        justify-content: space-evenly; */
+        top: 50px;
+        height: calc(100vh - 50px);
+        justify-content: space-around;
+        width: 50%;
+
+       
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        z-index: 2;
+        transform: translateX(100%);
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .reg {
+        position: relative;
+    }
+
+    .farbucks {
+        display: contents;
+        color: #DF7427;
+        font-size: 30px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* ----------------------------- content ----------------------- */
+
+
+.content img {
+    height: auto;
+    width: 100%;
+}
+
+.team {
+    padding-top: 70px;
+    padding-left: 130px;
+    padding-bottom: 70px;
+}
+
+.team h3 {
+    font-size: 60px;
+    padding-bottom: 50px;
+}
+
+.team img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 10px;
+    border-radius: 60%;
+}
+
+.team h4 {
+    position: relative;
+    bottom: 80px;
+    left: 130px;
+    font-size: 32px;
+}
+
+.team p {
+    position: relative;
+    bottom: 80px;
+    left: 130px;
+    font-size: 24px;
+}
+
+.dot2 {
+    height: 100px;
+    width: 110px;
+    background-color: #757575;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 500px;
+    top: 5px;
+}
+
+.dot2 img {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    background: transparent;
+    position: relative;
+    top: 8px;
+    left: 20px;
+}
+
+.dot2 p {
+    position: relative;
+    top: 10px;
+    left: 0;
+    font-size: 28px;
+}
+
+@media screen and (max-width: 576px) {
+    .content img {
+        height: 47vh;
+        width: auto;
+        position: relative;
+        left: 40px;
+    }
+
+    .team {
+        padding-left: 20px;
+    }
+
+    .team h3 {
+        position: relative;
+        left: 50px;
+        font-size: 30px;
+    }
+
+    .team h4 {
+        bottom: 58px;
+        font-size: 20px;
+    }
+
+    .team p {
+        bottom: 60px;
+        font-size: 12px;
+    }
+
+    .team img {
+        height: 80px;
+        width: 70px;
+    }
+
+    .dot2 {
+        height: 80px;
+        width: 90px;
+        left: 200px;
+    }
+
+    .dot2 img {
+        height: 70px;
+        width: 70px;
+        top: 3px;
+        left: 16px;
+    }
+
+    .dot2 p {
+        left: 10px;
+        font-size: 16px;
+    }
+}
+
+
+/* --------------------- footer -------------------------- */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 4%;
+    background: #000000;
+}
+
+footer .text {
+    color: #ffffff;
+    display: flex;
+    position: relative;
+}
+
+.text .cus-serv {
+    position: relative;
+    left: 40%;
+}
+
+.cus-serv:hover {
+    text-decoration: underline;
+}
+
+footer h2 {
+    font-size: 26px;
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+footer h2:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer img {
+    height: 37px;
+    width: 41px;
+    position: relative;
+    top: 50px;
+    right: 17px;
+}
+
+footer .fb {
+    position: relative;
+    right: 10px;
+}
+
+footer h1 {
+    position: relative;
+    left: 47%;
+    bottom: 680px;
+    color: #DF7427;
+    font-weight: 600;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .text {
+        left: 50px;
+    }
+
+    footer .text {
+        display: block;
+        padding-bottom: 30px;
+    }
+
+    footer h2 {
+        font-size: 21px;
+        padding-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer img {
+        left: 35px;
+    }
+
+    .text .cus-serv {
+        position: relative;
+        left: 0;
+        top: 40px;
+    }
+
+    footer h1 {
+        bottom: 340px;
+        left: 45%;
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style_homepage.css">
+</head>
+<body>
+
+    <!-- ----------------header-------------- -->
+
+    <header>
+        <nav>
+            <div>
+                <span class="dot">
+                    <img src="aset/Raw Image/Company Logo.png" alt="logo">
+                </span>
+            </div>
+            
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="coffee.html">Coffee</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="register.html" class="reg">Register</a></li>
+            </ul>
+
+            <a href="homepage.html" class="farbucks">FArbucks</a>
+
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+    
+
+    <!-- -----------------content---------------- -->
+    
+
+    <!------------------image slider------------->
+    <div class="slider">
+
+        <div class="slides">
+          
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+          
+            <div class="slide first">
+                <hr>
+                <img src="aset/Raw Image/welcome.jpg" alt="welcome">
+                <img src="aset/Raw Image/Accessory 1.png" alt="Accessory" class="accessory1">
+                <img src="aset/Raw Image/Accessory 1.png" alt="Accessory" class="accessory2">
+                <h3>Welcome to FArbucks</h3>
+                <h6>I Come, I Order, I Satisfied</h6>
+            </div>
+
+            <div class="slide">
+                <a href="event.html"><img src="aset/Page Image/Home 3.png" alt="Blcak March"></a>
+            </div>
+            <div class="slide">
+                <a href="event.html"><img src="aset/Page Image/Event 2.png" alt="Daily Checkin"></a>
+            </div>
+          
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+        </div>
+
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var counter = 2;
+
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 3){
+                counter = 1;
+            }
+        }, 5000);
+
+    </script>
+
+    <!-- ------------------ introduction -------------- -->
+    <div class="introduction">
+        <div class="first">
+            <h5>Taste Like No Other</h5>
+            <p>Quality is what we always bring to the table<br>
+                for our customers. We're passionate about<br>
+                ethically sourcing only the finest coffee beans<br>
+                and roasting them with great care. Our<br>
+                passion for coffee is rivaled only by our love<br>
+                of sharing it.</p>
+            <a href="coffee.html" class="coffee-btn">Get to know our coffee</a>
+        </div>
+
+        <div class="second">
+            <img src="aset/Raw Image/Coffee 1.png" alt="coffee1" class="coffee1">
+            <img src="aset/Raw Image/Coffee 2.jpeg" alt="coffee2" class="coffee2">
+            <img src="aset/Raw Image/Coffee 3.jpg" alt="coffee3" class="coffee3">
+        </div>
+    </div>
+
+    <!-- ------------------ black march banner -------------- -->
+
+    <div class="black-march">
+        <h3>Black March is Back!</h3>
+        <img src="aset/Raw Image/Black March Banner.jpg" alt="black-march">
+        <a href="event.html"><button>Join Now</button></a>
+    </div>
+
+
+    <!-- ----------------- promotion banner ------------------ -->
+
+    <div class="promotion">
+        <img src="aset/Page Image/Home 4.png" alt="Promotion Banner">
+    </div>
+
+
+    <!-- ------------------------- footer ------------------------- -->
+
+    <footer>
+        <div class="text">
+            <div>
+                <a href="about-us.html"><h2>About Us</h2></a>
+                <p>We travel the world in search of great<br>coffee. In the process, we discover beans<br>
+                so special and rare that we can’t wait to<br>bring them home and share. Each of<br>
+                these small-lot coffees has its own story<br>to tell, and we meticulously develop a<br>
+                signature roast for every one of them.</p>
+            </div>
+            
+            <div >
+                <a href="FAQ.html"><h2 class="cus-serv">customers Service</h2></a>
+                <a href="FAQ.html"><p class="cus-serv">Frequently Ask Question</p></a>
+            </div>
+        </div>
+            
+        </div>
+
+        <a href="https://www.facebook.com/narendra.dharma.71" class="fb"><img src="aset/Raw Image/FB.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/naren_dradharma/"><img src="aset/Raw Image/IG.png" alt="Instagram"></a>
+        <a href="homepage.html"><h1>FArbucks</h1></a>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

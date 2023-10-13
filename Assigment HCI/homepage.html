@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunbic</title>
+    <link rel="stylesheet" href="style_homepage.css">
+    <style>
+        .layer{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .layer:hover {
+            background: rgba(226, 0, 0, 0.7);
+        }
+
+        .layer h3 {
+            width: 100%;
+            font-weight: 500;
+            color: white;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .layer:hover h3 {
+            bottom: 49px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ----------------- header -------------------- -->
+    
+    <section class="header">
+        <nav>
+            <a href="homepage.html"><img src="aset/Logo univ.png" alt="Logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <h1>World Class University</h1>
+            <p>Sunbic is the first world class university to foster and empower Indonesia</p>
+            <a href="formpage.html" class="hero-btn">JOIN US NOW</a>
+        </div>
+
+    </section>
+
+
+    <!------------------- Course ------------------->
+
+    <section class="course">
+        <h1>Course we offer</h1>
+        <p>Sunbic offer 3 course taught by excellent lecturer</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Computer Science</h3>
+                <p>If you want to be full-stack developer, data scientist, or anything revolve programming, choose Computer Science</p>
+            </div>
+            <div class="course-col">
+                <h3>Management</h3>
+                <p>Learn to manage anything from money to people</p>
+            </div>
+            <div class="course-col">
+                <h3>Enginering</h3>
+                <p>Build magnificent building from scratch, that is enginer way</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------- campus --------------------- -->
+
+    <section class="campus">
+        <h1>Our Campus</h1>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="aset/Binus Alsut.jpg" alt="Campus Alsut">
+                <div class="layer">
+                    <h3>Alam Sutra</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="aset/Binus Anggrek.jpg" alt="Campus Anggrek">
+                <div class="layer">
+                    <h3>Anggrek</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="aset/Binus syahdan.jpg" alt="Campus Syahdan">
+                <div class="layer">
+                    <h3>Syahdan</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------- Footer --------------------->
+
+    <section class="footer">
+        <h4>SUNBIC UNIVERSITY</h4>
+        <p>Jl. K. H. Sutomo No. 7, Kejerukan, Palkuning, Jakarta 77777 Indonesia<br>Phone +62 23 456 789<br>Fax +62 00 000 0000</p>
+
+        <div class="icon">
+            <a href="https://www.facebook.com/narendra.dharma.71"><img src="aset/FB.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/naren_dradharma/"><img src="aset/IG.png" alt="instagram"></a>
+        </div>
+        <h6>copyright <img src="aset/copyright.jpg" alt="copyright"> Sunbic Education. All rights reserved</h6>
+    </section>
+
+
+</body>
+</html>
